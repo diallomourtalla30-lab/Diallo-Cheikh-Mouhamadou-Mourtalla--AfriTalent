@@ -1,18 +1,150 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AfriTalent — Accueil</title>
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriTalent — Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script>
-<script src="js/main.js"></script>
+    <header>
+        <!-- Navigation Bootstrap commune a toutes les pages -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">AfriTalent</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <button type="button" class="btn btn-info">Rejoindre AfriTalent</button>
+
+                </div>
+                <div class="d-flex aline-items-left gap-5">
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+    <section>
+        <h1>Choisissez votre plan</h1>
+        <p>
+            Des offres adaptées aux freelances débutants,
+            professionnels et grandes entreprises.
+        </p>
+    </section>
+
+    <section>
+        <article>
+            <img src="images/gratuit.jpg" width="150" alt="Plan Gratuit">
+
+            <h2>Gratuit</h2>
+            <p>0 € / mois</p>
+
+            <p>✔ Création de profil</p>
+            <p>✔ 3 candidatures par mois</p>
+            <p>✔ Support standard</p>
+            <p>✖ Statistiques avancées</p>
+            <p>✖ Mise en avant du profil</p>
+
+            <button>Commencer gratuitement</button>
+        </article>
+
+        <article>
+            <img src="images/pro.jpg" width="150" alt="Plan Pro">
+
+            <h2>Pro</h2>
+            <p>19 € / mois</p>
+
+            <p>✔ Profil premium</p>
+            <p>✔ Candidatures illimitées</p>
+            <p>✔ Support prioritaire</p>
+            <p>✔ Statistiques détaillées</p>
+            <p>✔ Mise en avant du profil</p>
+
+            <button>Choisir Pro</button>
+        </article>
+
+        <article>
+            <img src="images/entreprise.jpg" width="150" alt="Plan Entreprise">
+
+            <h2>Entreprise</h2>
+            <p>49 € / mois</p>
+
+            <p>✔ Recrutement rapide</p>
+            <p>✔ Publication illimitée</p>
+            <p>✔ Assistance dédiée</p>
+            <p>✔ Tableau de bord avancé</p>
+            <p>✔ Visibilité maximale</p>
+
+            <button>Choisir Entreprise</button>
+        </article>
+    </section>
+
+    <section>
+        <h2>Questions fréquentes</h2>
+
+        <article>
+            <h3>Comment créer un compte ?</h3>
+            <p>
+                Cliquez sur inscription et remplissez
+                le formulaire demandé.
+            </p>
+        </article>
+
+        <article>
+            <h3>Puis-je changer de formule ?</h3>
+            <p>
+                Oui, vous pouvez passer d'une formule
+                à une autre à tout moment.
+            </p>
+        </article>
+
+        <article>
+            <h3>Le plan gratuit est-il limité ?</h3>
+            <p>
+                Oui, certaines fonctionnalités premium
+                ne sont pas incluses.
+            </p>
+        </article>
+
+        <article>
+            <h3>Comment payer ?</h3>
+            <p>
+                Les paiements se font en ligne
+                de manière sécurisée.
+            </p>
+        </article>
+
+        <article>
+            <h3>Y a-t-il un support client ?</h3>
+            <p>
+                Oui, notre équipe est disponible
+                pour vous accompagner.
+            </p>
+        </article>
+    </section>
+
+</main>
+
+<footer>
+    <p>© AfriTalent - Tous droits réservés</p>
+</footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
