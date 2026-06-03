@@ -10,7 +10,7 @@
     --secondary:#6610f2;
     --dark:#111827;
     --light:#f8f9fa;
-    --white:#ffffff;
+    --white:#7689f8;
     --gray:#6b7280;
 
     --radius:12px;
@@ -30,18 +30,99 @@ body{
 h1,h2,h3,h4{
     font-family:'Montserrat', sans-serif;
 }
-.navbar{
-    background:var(--white);
-    padding:15px 0;
+/* HERO */
+.hero{
+    padding:100px 0;
 }
 
-.navbar-brand{
-    font-size:28px;
+.hero-text h1{
+    font-size:60px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero-text h2{
+    font-size:22px;
+    color:gray;
+    margin-bottom:25px;
+}
+
+.hero-img{
+    width:100%;
+    border-radius:20px;
+}
+
+.stats{
+    display:flex;
+    gap:30px;
+    margin-top:20px;
     font-weight:bold;
-    color:var(--primary);
 }
 
-.nav-link{
-    color:var(--dark);
-    margin-left:15px;
+
+/* COMMENT CA MARCHE */
+.bento-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.box{
+    background:rgba(200, 192, 245, 0.616);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.big{
+    grid-column:span 2;
+}
+
+.wide{
+    grid-column:span 2;
+}
+
+/* CATEGORIES */
+.categories{
+    padding:80px 0;
+}
+
+.categorie-card{
+    background:rgba(200, 192, 245, 0.616);
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:20px;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.categorie-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+/* TEMOIGNAGES */
+.testimonials{
+    background:rgba(200, 192, 245, 0.616);
+    padding:80px 0;
+}
+
+.carousel-item{
+    padding:30px;
+    text-align:center;
+}
+
+.carousel-item img{
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.carousel-item blockquote{
+    font-style:italic;
+}
+
+/* CTA */
+section.text-center{
+    padding:80px 0;
 }

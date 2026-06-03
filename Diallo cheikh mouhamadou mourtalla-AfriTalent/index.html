@@ -37,84 +37,210 @@
         </nav>
     </header>
     <main>
+<section class="hero container">
 
-<section>
-    <img src="images/hero.jpg" alt="Hero image" width="500">
+    <div class="row align-items-center">
 
-    <h1>Trouvez le freelance idéal</h1>
-    <h2>La plateforme africaine qui connecte talents et entreprises.</h2>
+        <div class="col-lg-6 hero-text">
 
-    <button>Je suis Freelance</button>
-    <button>Je cherche un Freelance</button>
+            <h1>Trouvez le freelance idéal</h1>
 
-    <p>+2500 freelances</p>
-    <p>+800 entreprises</p>
-    <p>+12000 missions réalisées</p>
+            <h2>
+                La plateforme africaine qui connecte talents et entreprises.
+            </h2>
+
+            <button>Je suis Freelance</button>
+
+            <button>Je cherche un Freelance</button>
+
+            <div class="stats">
+
+                <p>+2500 freelances</p>
+
+                <p>+800 entreprises</p>
+
+                <p>+12000 missions réalisées</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+            <img src="images/hero.jpg"
+                 alt="Hero image"
+                 class="hero-img">
+
+        </div>
+
+    </div>
+
 </section>
 
-<section>
+<section class="container">
+
     <h2>Comment ça marche ?</h2>
 
-    <article>
-        <h3>Créer un compte</h3>
-        <p>Inscrivez-vous gratuitement et créez votre profil.</p>
-    </article>
+    <div class="bento-grid">
 
-    <article>
-        <h3>Trouver une mission</h3>
-        <p>Parcourez les opportunités adaptées à vos compétences.</p>
-    </article>
+        <article class="box big">
 
-    <article>
-        <h3>Collaborer</h3>
-        <p>Travaillez avec des entreprises ambitieuses.</p>
-    </article>
+            <h3>Créer un compte</h3>
 
-    <article>
-        <h3>Être payé</h3>
-        <p>Recevez vos paiements de manière sécurisée.</p>
-    </article>
+            <p>
+                Inscrivez-vous gratuitement et créez votre profil.
+            </p>
+
+        </article>
+
+        <article class="box">
+
+            <h3>Trouver une mission</h3>
+
+            <p>
+                Parcourez les opportunités adaptées à vos compétences.
+            </p>
+
+        </article>
+
+        <article class="box">
+
+            <h3>Collaborer</h3>
+
+            <p>
+                Travaillez avec des entreprises ambitieuses.
+            </p>
+
+        </article>
+
+        <article class="box wide">
+
+            <h3>Être payé</h3>
+
+            <p>
+                Recevez vos paiements de manière sécurisée.
+            </p>
+
+        </article>
+
+    </div>
+
 </section>
 
-<section>
+
+<!-- CATÉGORIES -->
+
+<section class="categories container">
+
     <h2>Catégories de services</h2>
 
-    <article><p>Développement Web</p></article>
-    <article><p>Design UI/UX</p></article>
-    <article><p>Marketing Digital</p></article>
-    <article><p>Data & IA</p></article>
-    <article><p>Rédaction Tech</p></article>
-    <article><p>DevOps & Cloud</p></article>
+    <article class="categorie-card">
+        <p>Développement Web</p>
+    </article>
+
+    <article class="categorie-card">
+        <p>Design UI/UX</p>
+    </article>
+
+    <article class="categorie-card">
+        <p>Marketing Digital</p>
+    </article>
+
+    <article class="categorie-card">
+        <p>Data & IA</p>
+    </article>
+
+    <article class="categorie-card">
+        <p>Rédaction Tech</p>
+    </article>
+
+    <article class="categorie-card">
+        <p>DevOps & Cloud</p>
+    </article>
+
+</section>
+<!-- TÉMOIGNAGES -->
+
+<section class="testimonials container">
+
+    <h2 class="text-center mb-4">Témoignages</h2>
+
+    <div id="temoignagesCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active text-center">
+
+                <img src="images/temoin1.jpeg" width="130" height="200" alt="">
+
+                <h3>Mouhamed Diallo</h3>
+
+                <p>Freelance Web</p>
+
+                <blockquote>
+                    Une excellente plateforme professionnelle.
+                </blockquote>
+
+            </div>
+
+            <div class="carousel-item text-center">
+
+                <img src="images/temoin2.jpeg" width="130" height="200" alt="">
+
+                <h3>Lalya Aidara</h3>
+
+                <p>Entreprise</p>
+
+                <blockquote>
+                    Nous avons trouvé des talents rapidement.
+                </blockquote>
+
+            </div>
+
+            <div class="carousel-item text-center">
+
+                <img src="images/temoin3.jpeg" width="130" height="200" alt="">
+
+                <h3>Moussa Ba</h3>
+
+                <p>Freelance Data</p>
+
+                <blockquote>
+                    Expérience très enrichissante.
+                </blockquote>
+
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#temoignagesCarousel"
+                data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+
+        </button>
+
+        <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#temoignagesCarousel"
+                data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+
+        </button>
+
+    </div>
+
 </section>
 
-<section>
-    <h2>Témoignages</h2>
+<section class="container text-center">
 
-    <article>
-        <img src="images/temoin1.jpeg" width="130"  height="200">
-        <h3>Mouhamed Diallo</h3>
-        <p>Freelance Web</p>
-        <blockquote>Une excellente plateforme professionnelle.</blockquote>
-    </article>
-
-    <article>
-        <img src="images/temoin2.jpeg" width="130" height="200" alt="">
-        <h3>Lalya Aidara</h3>
-        <p>Entreprise</p>
-        <blockquote>Nous avons trouvé des talents rapidement.</blockquote>
-    </article>
-
-    <article>
-        <img src="images/temoin3.jpeg" width="130" height="200" alt="">
-        <h3>Moussa Ba</h3>
-        <p>Freelance Data</p>
-        <blockquote>Expérience très enrichissante.</blockquote>
-    </article>
-</section>
-
-<section>
     <h2>Prêt à lancer votre prochain projet ?</h2>
+
     <button>S'inscrire maintenant</button>
+
 </section>
 
 </main>
