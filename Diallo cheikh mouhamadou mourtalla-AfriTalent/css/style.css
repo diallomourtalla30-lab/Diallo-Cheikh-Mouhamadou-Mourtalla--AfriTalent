@@ -223,3 +223,44 @@ iframe{
     }
 
 }
+
+ NAVBAR DYNAMIQUE
+
+.navbar{
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled{
+    background: rgba(0,0,0,0.95) !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+ DARK MODE
+
+body.dark-mode{
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar{
+    background-color: #1e1e1e !important;
+}
+
+body.dark-mode .box,
+body.dark-mode .categorie-card,
+body.dark-mode .carousel-item,
+body.dark-mode footer{
+    background-color: #222;
+    color: #ffffff;
+}
+
+BOUTON RETOUR EN HAUT 
+
+#backToTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 999;
+}
