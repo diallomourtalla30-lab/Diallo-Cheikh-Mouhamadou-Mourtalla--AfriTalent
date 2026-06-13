@@ -1,3 +1,63 @@
+const counters = document.querySelectorAll(".counter");
+
+const startCounter = () => {
+
+    counters.forEach(counter => {
+
+        const target = +counter.dataset.target;
+
+        let count = 0;
+
+        const updateCounter = () => {
+
+            const increment = target / 100;
+
+            if(count < target){
+
+                count += increment;
+
+                counter.textContent =
+                    Math.floor(count).toLocaleString();
+
+                requestAnimationFrame(updateCounter);
+
+            }else{
+
+                counter.textContent =
+                    target.toLocaleString();
+
+            }
+
+        };
+
+        updateCounter();
+
+    });
+
+};
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            startCounter();
+            observer.disconnect();
+
+        }
+
+    });
+
+});
+
+const statsSection = document.querySelector(".stats");
+ 
+
+if (statsSection) {
+    observer.observe(statsSection);
+}
+
 //  DARK MODE
 
 const themeToggle = document.getElementById("theme-toggle");
@@ -5,10 +65,12 @@ const themeToggle = document.getElementById("theme-toggle");
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
     themeToggle.textContent = "☀️";
+    
 }
 
-themeToggle.addEventListener("click", () => {
+if(themeToggle){
 
+themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 
     if (document.body.classList.contains("dark-mode")) {
@@ -20,6 +82,8 @@ themeToggle.addEventListener("click", () => {
     }
 
 });
+}
+
 
 //  NAVBAR + BOUTON RETOUR EN HAUT
 
@@ -42,9 +106,9 @@ window.addEventListener("scroll", () => {
 
 });
 
-// RETOUR EN HAUT 
-
-backToTop.addEventListener("click", () => {
+// RETOUR EN HAUT
+if(backToTop){
+backToTop.addEventListener("click", () => { 
 
     window.scrollTo({
         top: 0,
@@ -52,3 +116,61 @@ backToTop.addEventListener("click", () => {
     });
 
 });
+}
+
+// footer
+const currentYear = document.getElementById("currentYear");
+
+if(currentYear){
+    currentYear.textContent = new Date().getFullYear();
+}
+   
+
+
+
+const fadeSections = document.querySelectorAll(".fade-section");
+
+if (fadeSections.length > 0) {
+
+    const fadeObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+    fadeSections.forEach(section => {
+
+        if (section instanceof Element) {
+            fadeObserver.observe(section);
+        }
+
+    });
+
+}
+// const fadeSections = document.querySelectorAll(".fade-section");
+
+// const fadeObserver = new IntersectionObserver((entries) => {
+
+//     entries.forEach(entry => {
+
+//         if(entry.isIntersecting){
+//             entry.target.classList.add("show");
+//         }
+
+//     });
+
+// },{
+//     threshold: 0.2
+// });
+
+// fadeSections.forEach(section => {
+//     fadeObserver.observe(section);
+// });
