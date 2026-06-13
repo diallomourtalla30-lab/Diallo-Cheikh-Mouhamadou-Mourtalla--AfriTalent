@@ -155,22 +155,194 @@ if (fadeSections.length > 0) {
     });
 
 }
-// const fadeSections = document.querySelectorAll(".fade-section");
+//  const fadeSections = document.querySelectorAll(".fade-section");
 
-// const fadeObserver = new IntersectionObserver((entries) => {
+const fadeObserver = new IntersectionObserver((entries) => {
 
-//     entries.forEach(entry => {
+    entries.forEach(entry => {
 
-//         if(entry.isIntersecting){
-//             entry.target.classList.add("show");
-//         }
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
 
+    });
+
+},{
+    threshold: 0.2
+});
+
+fadeSections.forEach(section => {
+    fadeObserver.observe(section);
+});
+
+// FILTRE FREELANCES
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".categorie-card");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const filter = button.dataset.filter;
+
+        cards.forEach(card => {
+
+            if (
+                filter === "all" ||
+                card.dataset.category === filter
+            ) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+ });
+
+// contacts
+// const form = document.getElementById("contactForm");
+
+// if (form) {
+//     form.addEventListener("submit", function(e) {
+//         // code
 //     });
 
-// },{
-//     threshold: 0.2
-// });
+//  const form = document.getElementById("contactForm");
 
-// fadeSections.forEach(section => {
-//     fadeObserver.observe(section);
-// });
+// if (form) {
+//     form.addEventListener("submit", function(e) {
+
+//         e.preventDefault();
+
+//         let valid = true;
+
+    //     document.querySelectorAll(".text-danger").forEach(error => {
+    //         error.textContent = "";
+    //     });
+
+    //     const nom = document.getElementById("nom");
+    //     const prenom = document.getElementById("prenom");
+    //     const email = document.getElementById("email");
+    //     const sujet = document.getElementById("sujet");
+    //     const message = document.getElementById("message");
+    //     //  verification des champs obligatoire
+    //     if (nom.value.trim() === "") {
+    //         document.getElementById("nomError").textContent =
+    //             "Le nom est obligatoire";
+    //         valid = false;
+    //     }
+
+    //     if (prenom.value.trim() === "") {
+    //         document.getElementById("prenomError").textContent =
+    //             "Le prénom est obligatoire";
+    //         valid = false;
+    //     }
+    //     // verification email avec regex
+
+    //     const regex =
+    //         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    //     if (!regex.test(email.value.trim())) {
+    //         document.getElementById("emailError").textContent =
+    //             "Email invalide";
+    //         valid = false;
+    //     }
+
+    //     if (sujet.value === "") {
+    //         document.getElementById("sujetError").textContent =
+    //             "Veuillez choisir un sujet";
+    //         valid = false;
+    //     }
+    //     // message minimum 20 caracteres
+    //     if (message.value.trim().length < 20) {
+    //         document.getElementById("messageError").textContent =
+    //             "Le message doit contenir au moins 20 caractères";
+    //         valid = false;
+    //     }
+
+    //     if (valid) {
+    //         document
+    //             .getElementById("successMessage")
+    //             .classList.remove("d-none");
+
+    //         form.reset();
+    //     }
+    // });
+
+
+    // Contact
+
+const form = document.getElementById("contactForm");
+
+if (form) {
+
+    form.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        let valid = true;
+
+        document.querySelectorAll(".text-danger").forEach(error => {
+            error.textContent = "";
+        });
+
+        const nom = document.getElementById("nom");
+        const prenom = document.getElementById("prenom");
+        const email = document.getElementById("email");
+        const sujet = document.getElementById("sujet");
+        const message = document.getElementById("message");
+
+        // Vérification des champs obligatoires
+
+        if (nom.value.trim() === "") {
+            document.getElementById("nomError").textContent =
+                "Le nom est obligatoire";
+            valid = false;
+        }
+
+        if (prenom.value.trim() === "") {
+            document.getElementById("prenomError").textContent =
+                "Le prénom est obligatoire";
+            valid = false;
+        }
+
+        // Vérification email avec Regex
+
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!regex.test(email.value.trim())) {
+            document.getElementById("emailError").textContent =
+                "Email invalide";
+            valid = false;
+        }
+
+        if (sujet.value === "") {
+            document.getElementById("sujetError").textContent =
+                "Veuillez choisir un sujet";
+            valid = false;
+        }
+
+        // Message minimum 20 caractères
+
+        if (message.value.trim().length < 20) {
+            document.getElementById("messageError").textContent =
+                "Le message doit contenir au moins 20 caractères";
+            valid = false;
+        }
+
+        // Message de succès
+
+        if (valid) {
+            document.getElementById("successMessage")
+                .classList.remove("d-none");
+
+            form.reset();
+        }
+
+    });
+
+}

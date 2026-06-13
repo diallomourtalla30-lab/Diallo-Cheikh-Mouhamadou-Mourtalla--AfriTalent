@@ -510,19 +510,7 @@ h1,h2,h3,h4{
     transform: translateY(-5px);
 }
 
-/* .cta-section{
 
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #0ea5e9
-        );
-
-    border-radius: 30px;
-
-    margin: 80px auto;
-} */
 
 
 @media (max-width: 500px){
@@ -786,4 +774,338 @@ body.dark-mode footer{
 .key-stats article p{
     color: #64748b;
     font-weight: 600;
+}
+
+
+/* ===== PAGE FREELANCES ===== */
+
+body{
+    background: #f8fafc;
+}
+
+/* HERO */
+
+main section:first-of-type{
+    text-align: center;
+    padding: 80px 20px;
+    /* background: linear-gradient(135deg,#2563eb,#3b82f6); */
+    color: white;
+    border-radius: 0 0 30px 30px;
+}
+
+main section:first-of-type h1{
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+main section:first-of-type p{
+    font-size: 1.2rem;
+    opacity: .9;
+}
+
+/* FILTRES */
+
+main section:nth-of-type(2){
+    text-align: center;
+    padding: 40px 0;
+}
+
+main section:nth-of-type(2) button{
+    border: none;
+    background: white;
+    /* color: #2563eb; */
+    padding: 12px 22px;
+    margin: 8px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+main section:nth-of-type(2) button:hover{
+    background: #2563eb;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* TITRE CATALOGUE */
+
+ .container h2{
+    color: #2563eb;
+    font-weight: 800;
+} 
+
+/* CARTES FREELANCES */
+
+.categorie-card{
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    transition: .4s;
+    margin-bottom: 30px;
+    height: 100%;
+    border: 1px solid #e2e8f0;
+}
+
+.categorie-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(37,99,235,.18);
+}
+
+/* PHOTOS */
+
+.categorie-card img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #60a5fa;
+    margin-bottom: 15px;
+}
+
+/* NOM */
+
+.categorie-card h3{
+    color: #1e3a8a;
+    font-weight: 700;
+}
+
+/* MÉTIER */
+
+.categorie-card p:nth-of-type(1){
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* BOUTON */
+
+.categorie-card button{
+    background: linear-gradient(135deg,#2563eb,#3b82f6);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: .3s;
+}
+
+.categorie-card button:hover{
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+
+/* HERO FREELANCES */
+
+.freelance-hero{
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg,#2563eb,#60a5fa);
+    color: white;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 50px;
+}
+
+.freelance-hero h1{
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.freelance-hero p{
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+    opacity: .95;
+}
+
+/* FILTRES */
+
+.freelance-filter{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.freelance-filter h2{
+    color: #2563eb;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.freelance-filter button{
+    background: white;
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    padding: 12px 22px;
+    border-radius: 50px;
+    margin: 8px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.freelance-filter button:hover{
+    background: #2563eb;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37,99,235,.25);
+}
+
+/* =========================
+   PAGE TARIFS
+========================= */
+
+/* HERO */
+
+.pricing-hero{
+    text-align: center;
+    padding: 90px 20px;
+    background: linear-gradient(135deg,#2563eb,#60a5fa);
+    color: white;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 60px;
+}
+
+.pricing-hero h1{
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.pricing-hero p{
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* CARTES TARIFS */
+
+.pricing-card{
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    transition: .4s;
+    margin-bottom: 30px;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+.pricing-card:hover{
+    transform: translateY(-10px);
+    border-color: #2563eb;
+    box-shadow: 0 20px 40px rgba(37,99,235,.18);
+}
+
+.pricing-card img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.pricing-card h2{
+    color: #2563eb;
+    font-weight: 800;
+}
+
+.pricing-card p{
+    margin-bottom: 10px;
+}
+
+.pricing-card button{
+    background: linear-gradient(135deg,#2563eb,#3b82f6);
+    color: rgb(84, 81, 240);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: .3s;
+}
+
+.pricing-card button:hover{
+    transform: scale(1.05);
+}
+
+/* METTRE EN AVANT LE PLAN PRO */
+
+.pricing-card:nth-child(2){
+    position: relative;
+}
+
+/* FAQ */
+
+.pricing-faq{
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.pricing-faq h2{
+    text-align: center;
+    color: #2563eb;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.pricing-faq article{
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.pricing-faq article:hover{
+    transform: translateX(8px);
+}
+
+.pricing-faq h3{
+    color: #1e3a8a;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .pricing-hero h1{
+        font-size: 2.2rem;
+    }
+
+}
+
+.popular-plan{
+    border: 3px solid #2563eb;
+    transform: scale(1.05);
+    position: relative;
+}
+
+.popular-badge{
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #2563eb;
+    color: rgb(0, 0, 0);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
 }
