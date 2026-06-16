@@ -616,14 +616,38 @@ iframe{
 
 .navbar{
     transition: all 0.3s ease;
+    background: transparent;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    position: center;
+    
 }
 
+
+
 .navbar.scrolled{
-    background: rgba(0,0,0,0.95) !important;
+    
+    background: rgb(70, 89, 255);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand{
+    color: #0d6efd !important;
+    color:#ecd714fa
+}
+    
+    /* background: white;
+    padding: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); */
+
+    /* background: rgba(0,0,0,0.95) !important;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     padding-top: 5px;
-     padding-bottom: 5px;  
-}
+     padding-bottom: 5px;   */
+
  /* DARK MODE */
 
 body.dark-mode{
@@ -646,7 +670,7 @@ body.dark-mode footer{
     opacity: 1;
     transform: translateY(50px);
     transition: opacity 0.8s ease,
-                transform 0.8s ease;
+     transform 0.8s ease;
 }
 
 .fade-section.show{
@@ -655,7 +679,7 @@ body.dark-mode footer{
 }
 
 
-/* ===== ABOUT PAGE MODERNE ===== */
+/*  ABOUT PAGE MODERNE  */
 
 .about-history{
     text-align: center;
@@ -777,7 +801,7 @@ body.dark-mode footer{
 }
 
 
-/* ===== PAGE FREELANCES ===== */
+/*PAGE FREELANCES  */
 
 body{
     background: #f8fafc;
@@ -963,9 +987,8 @@ footer{
     box-shadow: 0 10px 20px rgba(37,99,235,.25);
 }
 
-/* =========================
-   PAGE TARIFS
-========================= */
+
+   /* PAGE TARIFS */
 
 /* HERO */
 
@@ -1108,4 +1131,121 @@ footer{
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 700;
+}
+
+/* suite contact css */
+
+/* Hero contact */
+
+.contact-page main section:first-child {
+    background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+    color: rgb(45, 101, 255);
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.contact-page main section:first-child h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Formulaire */
+
+.contact-page form {
+    background: #497aff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-page .form-control,
+.contact-page .form-select {
+    margin-top: 5px;
+}
+
+.contact-page .btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+}
+
+/* Coordonnées */
+
+.contact-page .col-lg-4 {
+    background: #f4f5f53d;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+/* Carte Google Maps */
+
+.contact-page iframe {
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 220px;
+    gap: 20px;
+}
+
+
+/* pour comment ca marche */
+.bento-card {
+    background: #eef4ff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.step-number {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.bento-card h3 {
+    margin-bottom: 10px;
+}
+
+
+
+footer p {
+    animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
 }
