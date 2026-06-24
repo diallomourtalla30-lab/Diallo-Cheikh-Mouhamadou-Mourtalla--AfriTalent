@@ -621,11 +621,40 @@ iframe{
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    position: center;
-    
+    position: relative;
+    width:100%;
+    z-index: 1000;
+    justify-content: space-between;
 }
 
+/* ===== NAVBAR ===== */
 
+.navbar-brand {
+    color: #4da6ff !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #66b3ff !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 8px;
+   
+
+}
+
+/* Effet au survol */
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    background-color: #3399ff;
+}
+
+/* Lien actif */
+.navbar-nav .nav-link.active {
+    color: white !important;
+    background-color: #007bff;
+}
 
 .navbar.scrolled{
     
